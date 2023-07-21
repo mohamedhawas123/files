@@ -9,6 +9,10 @@ you will have to go to prisma/schema.prisma and change my config(like mysql user
 npx prisma db push
 npx prisma generate
 
+to start the server
+
+npm run start:dev
+
 there are 3 endpoints
 
 //POST http://localhost:3001/files/upload/ (send the file with it)
