@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+
+// url     = "mysql://<your mysql username>:<your mysql password>@127.0.0.1:3306/<your schema name in my sql>?schema=public"
+  url      = "mysql://root:Panzer@123@127.0.0.1:3306/files?schema=public"
+}
+
+model files {
+  id          Int       @id @default(autoincrement())
+  file_url    String?   @db.VarChar(255)
+  file_name   String?   @db.VarChar(45)
+  upload_date DateTime? @default(now()) @db.DateTime(0)
+}
